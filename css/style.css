@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Стили для всей страницы */
+body {
+    font-family: 'Raleway';
+    background: linear-gradient(0deg, #fb9d80d4, #ffccbc);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+
+/*Стили формы для ввода данных*/
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    width: 80%;
+    margin: auto;
+}
+
+/*Стили для заголовков*/
+h1,
+h2 {
+    text-align: center;/*выровнять текст заголовков блоков по центру*/
+    margin: 0 15%;
+}
+
+h1 {
+    margin: 1.5% 0 ;
+    font-weight: 650;
+}
+
+h2 {
+    margin-top: 0;
+    margin-bottom: 2%;
+    font-weight: 650;
+}
+/* Стили для линии */
+hr {
+    width: 90%;
+    margin: 20px 0;
+    padding: 0;
+    height: 0;
+    border: none;
+    border-top: 1px solid black;
+}
+
+/*Стили для подписей полей*/
+label,
+p,
+option {
+    font-size: 22px;
+    margin-bottom: 2%;
+    padding-left: 3%;
+    margin-top: 0;
+    font-weight: 500;
+}
+
+/*Стили для полей*/
+input,
+select {
+    height: 50px;
+    width: 95%;
+    border: 1px solid black;
+    border-radius: 20px;
+    margin-bottom: 3%;
+    font-size: 22px;/*Размер текста в поле ввода*/
+    padding: 0;
+    padding-left: 15px;
+}
+
+
+
+.house {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.house .parametrs {
+    display: flex;
+    flex-direction: column;
+}
+
+.parametrs,
+.dops div,
+.proem_door div,
+.proem_window div {
+    padding: 0 20%;
+}
+
+.dops {
+    display: flex;
+    flex-direction: column;
+    width: 77%;
+}
+
+.dops div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.dops input {
+    width: 30px;
+}
+
+#reserve,
+#pallets {
+    width: 30px;
+}
+
+.house select {
+    width: 99%;
+}
+
+.house .proem {
+    display: flex;
+    flex-direction: row;
+}
+
+.door_wind {
+    display: flex;
+    flex-direction: column;
+}
+
+.door_wind .proem {
+    display: flex;
+    flex-direction: column;
+}
+
+.door_wind div {
+    display: flex;
+    flex-direction: column;
+}
+
+.asterisk {
+    color: red;
+    size: 35px;
+}
+
+#btn {
+    width: 80%;
+    display: flex;
+}
+
+#send {
+    margin: 0 auto;
+    width: 30%;
+    height: 50px;
+    font-size: 26px;
+    border: black solid 2px;
+    border-radius: 20px;
+    padding: auto;
+    background-color: white;
+}
+
+#send:hover {
+    border: #ffccbc solid 2px;
+}
+
+#result {
+    margin-top: 30px;
+    width: 70%;
+    visibility: collapse;
+}
+
+#result h2 {
+    font-size: 26px;
+}
+
+table {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+td {
+    border-bottom: 1px solid black;
+    padding: 10px 5px;
+}
