@@ -1,140 +1,142 @@
 <!DOCTYPE html>
 <html lang="ru">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link type="text/css" rel="stylesheet" href="css/style.css">
-    <title>Калькулятор</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link type="text/css" rel="stylesheet" href="css/style.css">
+        <title>Калькулятор</title>
+    </head>
 
-<body>
-    <h1>Калькулятор количества газобетонных блоков для строения</h1>
-    <hr>
-    <form>
-        <div class="house">
-            <h2>Параметры строения</h2>
-            <div class="parametrs">
-                <label for="build_l">Длина, м<span class="asterisk">&ast;</span></label>
-                <input type="number" id="build_l" min="1" max="999" minlength="1" maxlength="3" placeholder="Введите длину" required>
+    <body>
+        <h1>Калькулятор количества газобетонных блоков для строения</h1>
+        <hr>
+        <form>
+            <div class="house">
+                <h2>Параметры строения</h2>
+                <div class="parametrs">
+                    <label for="build_l">Длина, м<span class="asterisk">&ast;</span></label>
+                    <input type="number" id="build_l" min="1" max="999" minlength="1" maxlength="3"
+                        placeholder="Введите длину" required>
+                </div>
+                <div class="parametrs">
+                    <label for="build_w">Ширина, м<span class="asterisk">&ast;</span></label>
+                    <input type="number" id="build_w" min="1" max="999" minlength="1" maxlength="3"
+                        placeholder="Введите ширину" required>
+                </div>
+                <div class="parametrs">
+                    <label for="build_h">Высота, м<span class="asterisk">&ast;</span></label>
+                    <input type="number" id="build_h" min="1" max="999" minlength="1" maxlength="3"
+                        placeholder="Введите высоту" required>
+                </div>
             </div>
-            <div class="parametrs">
-                <label for="build_w">Ширина, м<span class="asterisk">&ast;</span></label>
-                <input type="number" id="build_w" min="1" max="999" minlength="1" maxlength="3" placeholder="Введите ширину" required>
-            </div>
-            <div class="parametrs">
-                <label for="build_h">Высота, м<span class="asterisk">&ast;</span></label>
-                <input type="number" id="build_h" min="1" max="999" minlength="1" maxlength="3" placeholder="Введите высоту" required>
-            </div>
-        </div>
-        <div class="house">
-            <h2>Параметры кладки</h2>
-            <div class="parametrs">
-                <label for="block_type">Вид блока (Д x Ш x В, мм)</label>
-                <select id="block_type">
-                    <option value="100">Малый 600*300*100мм</option>
-                    <option value="200">Средний 600*300*200мм</option>
-                    <option value="400">Крупный 600*300*400мм</option>
-                </select>
-            </div>
-            <div class="parametrs">
-                <label for="wall_thickness">Толщина стен</label>
-                <select id="wall_thickness">
-                    <option value="300">Ширина блока</option>
-                    <option id="wall_thickness_h" value="">Высота блока</option>
-                </select>
-            </div>
+            <div class="house">
+                <h2>Параметры кладки</h2>
+                <div class="parametrs">
+                    <label for="block_type">Вид блока (Д x Ш x В, мм)</label>
+                    <select id="block_type">
+                        <option value="100">Малый 600*300*100мм</option>
+                        <option value="200">Средний 600*300*200мм</option>
+                        <option value="400">Крупный 600*300*400мм</option>
+                    </select>
+                </div>
+                <div class="parametrs">
+                    <label for="wall_thickness">Толщина стен</label>
+                    <select id="wall_thickness">
+                        <option value="300">Ширина блока (300мм)</option>
+                        <option id="wall_thickness_h" value="">Высота блока *в зависимости от выбранного вида блока</option>
+                    </select>
+                </div>
 
-        </div>
-        <div class="house door_wind">
-            <div class="proem">
-                <h2>Двери</h2>
-                <div class="proem_door">
-                    <div>
-                        <label for="door_h">Высота дверного проема, см<span class="asterisk">&ast;</span></label>
-                        <input type="number" id="door_h" placeholder="Введите высоту дверного проема" min="1" required>
+            </div>
+            <div class="house door_wind">
+                <div class="proem">
+                    <h2>Двери</h2>
+                    <div class="proem_door">
+                        <div>
+                            <label for="door_h">Высота дверного проема, см<span class="asterisk">&ast;</span></label>
+                            <input type="number" id="door_h" min="1" max="999" minlength="1" maxlength="4" placeholder="Введите высоту дверного проема" required>
+                        </div>
+                        <div>
+                            <label for="door_w">Ширина дверного проема, см<span class="asterisk">&ast;</span></label>
+                            <input type="number" id="door_w" min="1" max="999" minlength="1" maxlength="4" placeholder="Введите ширину дверного проема" required>
+                        </div>
+                        <div>
+                            <label for="door_quant">Количество дверных проемов, шт<span
+                                    class="asterisk">&ast;</span></label>
+                            <input type="number" id="door_quant" min="1" max="999" minlength="1" maxlength="4" placeholder="Введите количество дверных проемов" required>
+                        </div>
                     </div>
-                    <div>
-                        <label for="door_w">Ширина дверного проема, см<span class="asterisk">&ast;</span></label>
-                        <input type="number" id="door_w" placeholder="Введите ширину дверного проема" min="1" required>
-                    </div>
-                    <div>
-                        <label for="door_quant">Количество дверных проемов, шт<span
-                                class="asterisk">&ast;</span></label>
-                        <input type="number" id="door_quant" placeholder="Введите количество дверных проемов" min="1"
-                            required>
+                </div>
+                <div class="proem">
+                    <h2>Окна (если необходимо)</h2>
+                    <div class="proem_window">
+                        <div>
+                            <label for="window_h">Высота окна, см</label>
+                            <input type="number" id="window_h" min="0" max="999" minlength="1" maxlength="4" placeholder="Введите высоту окна">
+                        </div>
+                        <div>
+                            <label for="window_w">Ширина окна, см</label>
+                            <input type="number" id="window_w" min="0" max="999" minlength="1" maxlength="4" placeholder="Введите ширину окна">
+                        </div>
+                        <div>
+                            <label for="window_quant">Количество окон, шт.</label>
+                            <input type="number" id="window_quant" min="0" max="999" minlength="1" maxlength="4" placeholder="Введите количество окон">
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="proem">
-                <h2>Окна (если необходимо)</h2>
-                <div class="proem_window">
-                    <div>
-                        <label for="window_h">Высота окна, см</label>
-                        <input type="number" id="window_h" placeholder="Введите высоту окна" min="0">
-                    </div>
-                    <div>
-                        <label for="window_w">Ширина окна, см</label>
-                        <input type="number" id="window_w" placeholder="Введите ширину окна" min="0">
-                    </div>
-                    <div>
-                        <label for="window_quant">Количество окон, шт.</label>
-                        <input type="number" id="window_quant" placeholder="Введите количество окон" min="0">
-                    </div>
+            <div class="dops">
+                <div>
+                    <input type="checkbox" id="pallets" name="dop">
+                    <label for="pallets">Расчет кратно поддонам</label>
                 </div>
             </div>
-        </div>
-        <div class="dops">
-            <div>
-                <input type="checkbox" id="pallets" name="dop">
-                <label for="pallets">Расчет кратно поддонам</label>
-            </div>
-        </div>
-        <div id="btn"><button type="button" id="send" onclick="culc()">Расчитать</button></div>
+            <div id="btn"><button type="button" id="send" onclick="culc()">Расчитать</button></div>
 
-    </form>
-    <div id="result">
-        <h2>Результаты</h2>
-        <table>
-            <tr>
-                <td>Параметры строения (Д x Ш x В, м): </td>
-                <td id="parametrs_build"></td>
-            </tr>
-            <tr>
-                <td>Тип блока:</td>
-                <td id="type_block_rez"></td>
-            </tr>
-            <tr>
-                <td>Окна (В x Ш, м):</td>
-                <td id="windows"></td>
-            </tr>
-            <tr>
-                <td>Двери (В x Ш, м):</td>
-                <td id="doors"></td>
-            </tr>
-            <tr>
-                <td>Толщина стен: </td>
-                <td id="wall_thickness_rez"></td>
-            </tr>
-            <tr>
-                <td>Количество блоков необходимых для строительства: </td>
-                <td id="quant_blocks"></td>
-            </tr>
-            <tr>
-                <td>Количество блоков с учетом запаса 5%(по умолчанию): </td>
-                <td id="quant_blocks_5"></td>
-            </tr>
-            <tr>
-                <td id="pallet_parametr"></td>
-                <td id="quant_blocks_pallets"></td>
-            </tr>
-            <tr>
-                <th>Итоговое количество блоков:</th>
-                <th id="quant_blocks_end"></th>
-            </tr>
-        </table>
-    </div>
-    <script type="text/javascript" src="js/script.js"></script>
-</body>
+        </form>
+        <div id="result">
+            <h2>Результаты</h2>
+            <table>
+                <tr>
+                    <td>Параметры строения (Д x Ш x В, м): </td>
+                    <td id="parametrs_build"></td>
+                </tr>
+                <tr>
+                    <td>Тип блока:</td>
+                    <td id="type_block_rez"></td>
+                </tr>
+                <tr>
+                    <td>Окна (В x Ш, cм):</td>
+                    <td id="windows"></td>
+                </tr>
+                <tr>
+                    <td>Двери (В x Ш, cм):</td>
+                    <td id="doors"></td>
+                </tr>
+                <tr>
+                    <td>Толщина стен: </td>
+                    <td id="wall_thickness_rez"></td>
+                </tr>
+                <tr>
+                    <td>Количество блоков, необходимых для строительства: </td>
+                    <td id="quant_blocks"></td>
+                </tr>
+                <tr>
+                    <td>Количество блоков с учетом запаса 5%(по умолчанию): </td>
+                    <td id="quant_blocks_5"></td>
+                </tr>
+                <tr>
+                    <td id="pallet_parametr"></td>
+                    <td id="quant_blocks_pallets"></td>
+                </tr>
+                <tr>
+                    <th>Итоговое количество блоков:</th>
+                    <th id="quant_blocks_end"></th>
+                </tr>
+            </table>
+        </div>
+        <script type="text/javascript" src="js/script.js"></script>
+    </body>
 
 </html>

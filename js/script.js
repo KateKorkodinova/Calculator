@@ -57,19 +57,9 @@ function culc() {
   document.getElementById("wall_thickness_rez").innerHTML =
     wall_thickness + " мм";
 
-  if(block_h==100){
-    document.getElementById("wall_thickness_h").innerText = "Высота блока ("+block_h+" мм)"
-  }
-  if(block_h==200){
-    document.getElementById("wall_thickness_h").innerText = "Высота блока ("+block_h+" мм)"
-  }
-  if(block_h==400){
-    document.getElementById("wall_thickness_h").innerText = "Высота блока ("+block_h+" мм)"
-  }
-  
   //Расчет площади видимой части блока
   if (wall_thickness == 300) {
-    var square_block = block_l * block_h; //толщина - ширина блока
+    var square_block = block_l * block_h; //толщина - ширина блока 300мм
     document.getElementById("wall_thickness_rez").innerHTML =
       wall_thickness + " мм";
   } else {
@@ -88,51 +78,41 @@ function culc() {
   //кратно поддонам
   if (document.getElementById("pallets").checked) {
     if (block_h == 100) {
-      var dop_param = "Кратно поддонам. В одном поддоне 80 шт.";
+      var dop_param = "Кратно поддонам. </br>В одном поддоне 80 шт.";
       var pallets_count = Math.ceil(quant_blocks_5 / 80);
       var quant_blocks_end = pallets_count * 80;
 
       document.getElementById("pallet_parametr").innerHTML = dop_param;
       document.getElementById("quant_blocks_pallets").innerHTML =
-        "Тогда количество блоков: " +
-        quant_blocks_end +
-        " шт. (Поддонов - " +
-        pallets_count +
-        " шт.)";
+        "Количество блоков: " + quant_blocks_end + " шт. </br>(Поддонов - " +
+        pallets_count +" шт.)";
 
-      document.getElementById("quant_blocks_end").innerHTML =
-        quant_blocks_end + " шт.";
+      document.getElementById("quant_blocks_end").innerHTML = quant_blocks_end + " шт.";
     }
 
     if (block_h == 200) {
-      var dop_param = "Кратно поддонам. В одном поддоне 40 шт.";
+      var dop_param = "Кратно поддонам. </br>В одном поддоне 40 шт.";
       var pallets_count = Math.ceil(quant_blocks_5 / 40);
       var quant_blocks_end = pallets_count * 40;
 
       document.getElementById("pallet_parametr").innerHTML = dop_param;
       document.getElementById("quant_blocks_pallets").innerHTML =
-        "Тогда количество блоков: " +
-        quant_blocks_end +
-        " шт. (Поддонов - " +
-        pallets_count +
-        " шт.)";
+        "Количество блоков: " + quant_blocks_end + " шт. </br>(Поддонов - " +
+        pallets_count + " шт.)";
 
       document.getElementById("quant_blocks_end").innerHTML =
         quant_blocks_end + " шт.";
     }
 
     if (block_h == 400) {
-      var dop_param = "Кратно поддонам. В одном поддоне 18 шт.";
+      var dop_param = "Кратно поддонам. </br>В одном поддоне 18 шт.";
       var pallets_count = Math.ceil(quant_blocks_5 / 18);
       var quant_blocks_end = pallets_count * 18;
 
       document.getElementById("pallet_parametr").innerHTML = dop_param;
       document.getElementById("quant_blocks_pallets").innerHTML =
-        "Тогда количество блоков: " +
-        quant_blocks_end +
-        " шт.(Поддонов - " +
-        pallets_count +
-        " шт.)";
+        "Количество блоков: " + quant_blocks_end + " шт. </br>(Поддонов - " +
+        pallets_count + " шт.)";
 
       document.getElementById("quant_blocks_end").innerHTML =
         quant_blocks_end + " шт.";
@@ -141,6 +121,7 @@ function culc() {
   if (!document.getElementById("pallets").checked) {
     document.getElementById("pallet_parametr").innerHTML =
       "Кратность поддонам - НЕТ";
+      document.getElementById("quant_blocks_pallets").innerHTML=""
     document.getElementById("quant_blocks_end").innerHTML =
       quant_blocks_5 + " шт.";
   }
