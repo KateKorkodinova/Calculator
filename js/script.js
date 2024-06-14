@@ -57,6 +57,16 @@ function culc() {
   document.getElementById("wall_thickness_rez").innerHTML =
     wall_thickness + " мм";
 
+  if(block_h==100){
+    document.getElementById("wall_thickness_h").innerText = "Высота блока ("+block_h+" мм)"
+  }
+  if(block_h==200){
+    document.getElementById("wall_thickness_h").innerText = "Высота блока ("+block_h+" мм)"
+  }
+  if(block_h==400){
+    document.getElementById("wall_thickness_h").innerText = "Высота блока ("+block_h+" мм)"
+  }
+  
   //Расчет площади видимой части блока
   if (wall_thickness == 300) {
     var square_block = block_l * block_h; //толщина - ширина блока
